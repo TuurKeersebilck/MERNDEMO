@@ -1,24 +1,33 @@
-require("dotenv").config(); // environment variable config file globaal beschikbaar maken (is voor beveiliging)
-// require
+require("dotenv").config(); // Environment variable config file globaal beschikbaar maken (is voor beveiliging)
+// Require
 const express = require("express");
+const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
 
-// express app
+// Express app
 const app = express();
 
-// middleware
+// Middleware
 app.use(express.json()); // kijkt bij elke request of er een body is
 
 app.use((req, res, next) => {
-	// dit gebeurt voordat andere requests worden uitgevoerd
+	// Dit gebeurt voordat andere requests worden uitgevoerd
 	console.log(req.path, req.method);
 	next();
 });
 
-// routes
+// Routes
 app.use("/api/workouts", workoutRoutes); // alle requests naar /api/workouts worden doorgegeven aan workoutRoutes
 
-// listen for requests
-app.listen(process.env.PORT, () => {
-	console.log("listening on port " + process.env.PORT);
-});
+// Connect to database
+mongoose
+	.connect(process.env.MONGO_URI)
+	.then(() => {
+		// Pas luisteren naar requests als verbinding succesvol is
+		app.listen(process.env.PORT, () => {
+			console.log("Verbonden met database & listening op: " + process.env.PORT);
+		});
+	})
+	.catch((error) => {
+		console.log(error);
+	});
