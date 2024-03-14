@@ -19,3 +19,5 @@ const workoutSchema = new Schema(
 	},
 	{ timestamps: true } // Wanneer je een document aanmaakt maakt dit automatisch een create timestamp en updated timestamp
 );
+
+module.exports = mongoose.model("Workout", workoutSchema);

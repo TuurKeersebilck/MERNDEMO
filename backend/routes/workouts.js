@@ -1,6 +1,14 @@
 const express = require("express");
-
 const router = express.Router();
+
+// function imports
+const {
+	createWorkout,
+	getWorkouts,
+	getWorkout,
+	deleteWorkout,
+	updateWorkout,
+} = require("../Controllers/workoutController");
 
 // VOORBEELD __________________________________________________________________________________________________
 router.get("/hello", function (req, res) {
@@ -10,29 +18,18 @@ router.get("/hello", function (req, res) {
 //_____________________________________________________________________________________________________________
 
 // GET ALL WORKOUTS
-router.get("/", function (req, res) {
-	res.json({ message: "Get all workouts" });
-});
+router.get("/", getWorkouts);
 
 // GET SINGLE WORKOUT
-router.get("/:id", function (req, res) {
-	res.json({ message: "Get a single workout" });
-});
+router.get("/:id", getWorkout);
 
 // POST A NEW WORKOUT
-router.post("/", (req, res) => {
-	// STANDAARD POST
-	res.json({ message: "Post a new workout" });
-});
+router.post("/", createWorkout);
 
 // DELETE A WORKOUT
-router.delete("/:id", (req, res) => {
-	res.json({ message: "Delete a workout" });
-});
+router.delete("/:id", deleteWorkout);
 
 // UPDATE A WORKOUT
-router.patch("/:id", (req, res) => {
-	res.json({ message: "Update a workout" });
-});
+router.patch("/:id", updateWorkout);
 
 module.exports = router;
