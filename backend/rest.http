@@ -15,8 +15,8 @@ Content-Type: application/json
 
 {
   "title": "test",
-  "reps": "104", 
-  "weight": "100"
+  "reps": "10424230",
+  "weight": "1532330"
 }
 
 ###
@@ -29,8 +29,8 @@ PATCH http://localhost:4000/api/workouts/65f2cb5d3b5db808378f57f0
 Content-Type: application/json
 
 {
-  "title": "tset",
-  "reps": "14404",
-  "weight": "1450"
+  "title": "situps",
+  "reps": "100",
+  "weight": "150"
 }
 ###
