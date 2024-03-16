@@ -9,3 +9,5 @@ Instructies staan in de vault dus gewoon in backend een .env bestand aanmaken en
    Script in package.json zorgt ervoor dat ```npm run dev``` in backend wordt uitgevoerd samen met ```npm run``` in de frontend map
 
    Moest dit niet werken moet je deze 2 commando's apart ingeven per map
+
+# Er zijn deprecated warnings, idk how to fix, kheb alleen npm init gedaan bij frontend en ie geeft sindsdien al vulnerabilities...
