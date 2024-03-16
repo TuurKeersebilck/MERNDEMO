@@ -3,6 +3,7 @@ require("dotenv").config(); // Environment variable config file globaal beschikb
 const express = require("express");
 const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
+const userRoutes = require("./routes/user");
 
 // Express app
 const app = express();
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/api/workouts", workoutRoutes); // alle requests naar /api/workouts worden doorgegeven aan workoutRoutes
+app.use("/api/user", userRoutes);
 
 // Connect to database
 mongoose
