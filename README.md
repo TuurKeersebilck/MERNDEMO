@@ -1,14 +1,11 @@
-## EERST IN BACKEND EN FRONTEND MAP
-```npm i```
-## Verbinden MongoDB
-Instructies staan in de vault
+## STAPPENPLAN
+1. In root folder: ```npm i```
+                ```npm install-all```
 
-## Frontend opstarten
-```npm start```
+2. Verbinden MongoDB
+Instructies staan in de vault dus gewoon in backend een .env bestand aanmaken en de notitie van in de vault erin plakken
 
-## Backend opstarten
-```npm run dev```
+3. In root: ```npm run```
+   Script in package.json zorgt ervoor dat ```npm run dev``` in backend wordt uitgevoerd samen met ```npm run``` in de frontend map
 
---- Frontend ---
-context wrapt de volledige app in een eigen contextProvider wat de verschillende states handled voor bv realtime data te displayen(?) 
-
+   Moest dit niet werken moet je deze 2 commando's apart ingeven per map
