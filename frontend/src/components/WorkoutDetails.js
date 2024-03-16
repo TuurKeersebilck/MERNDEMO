@@ -31,8 +31,10 @@ const WorkoutDetails = ({ workout }) => {
 				<strong>Reps: </strong>
 				{workout.reps}
 			</p>
-			<p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
-			<span class="material-symbols-outlined" onClick={handleClick}>
+			<p>
+				{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}
+			</p>
+			<span className="material-symbols-outlined" onClick={handleClick}>
 				delete
 			</span>
 		</div>
