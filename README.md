@@ -10,4 +10,4 @@ Instructies staan in de vault dus gewoon in backend een .env bestand aanmaken en
 
    Moest dit niet werken moet je deze 2 commando's apart ingeven per map
 
-# Er zijn deprecated warnings, idk how to fix, kheb alleen npm init gedaan bij frontend en ie geeft sindsdien al vulnerabilities...
+# Er zijn deprecated warnings, idk how to fix, kheb alleen npx create-react-app gedaan bij voor frontend ( dit gaat vgm geen probleem zijn bij de transfo app )
